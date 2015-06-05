@@ -1,4 +1,8 @@
-language: c
+sudo: false
+
+addons:
+    apt_packages:
+        - lib32stdc++6
 
 env: 
   global:
@@ -11,10 +15,6 @@ env:
     - SOURCEMOD=1.7.2
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install gcc-multilib
-  - sudo apt-get install lynx
-  - sudo apt-get install lib32stdc++6
   - mkdir build-env
 
 install:
